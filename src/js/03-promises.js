@@ -30,8 +30,8 @@ function onSubmit(e){
   inLocal = localStorage.getItem(formToKey);
     parsed = JSON.parse(inLocal);
     // console.log(`{delay:${delayEl.value}, step:${stepEl.value}, amount: ${amountEl.value}}`);
-    let delay = Number(delayEl.value)
-    let step = Number(stepEl.value)
+    let delay = Number(delayEl.value);
+    let step = Number(stepEl.value);
     let amount = Number(amountEl.value);
     
     for (let i = 1; i <= amount; i += 1){
