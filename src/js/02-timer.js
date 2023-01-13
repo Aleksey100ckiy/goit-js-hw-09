@@ -17,17 +17,21 @@ dataMinutes: document.querySelector('[data-minutes]'),
 dataSeconds: document.querySelector('[data-seconds]'),
 };
 
-
+refs.dataStart.disabled = true;
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  
   onClose(selectedDates) {
    if(selectedDates[0].getTime() <= Date.now()){
     refs.dataStart.disabled = true;
     window.alert("Please choose a date in the future");
-   }
+   }else{
+    refs.dataStart.disabled = false;
+   };
+   
     // console.log(selectedDates[0].getTime());
     // console.log(Date.now());
   },
